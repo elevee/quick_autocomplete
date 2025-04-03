@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+input {
+  padding: 10px;
+  font-size: 18px;
+  width: 300px;
+  margin-top: 20px;
+}
+
+.suggestions-list {
+  margin-top: 10px;
+  background: white;
+  color: black;
+  width: 300px;
+  border: 1px solid chartreuse;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background: #f0f0f0;
+}
+
+.suggestion-item.selected {
+  background: #d0d0d0;
+  font-weight: bold;
+}
+
+.loading {
+  margin-top: 10px;
+  /* background: white; */
+  color: white;
+  width: 300px;
+  /* border: 1px solid chartreuse; */
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: green;
+}
+
+.clear-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.clear-button:hover {
+  color: #ff5722;
+}
