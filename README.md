@@ -1,71 +1,22 @@
-# Getting Started with Create React App
+# Autocomplete
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Instructions
 
-## Available Scripts
+The goal of this interview is for you to create a User Interface that performs autocomplete against a dictionary of words using an API endpoint. The frontend interface (as simple as an input in the middle of a page) displays matches based on user input (think of how iOS keyboard autocomplete looks/works as an example). So if the user types “foo” you'll want to look up results using the API and display the results such that the user could select one.
 
-In the project directory, you can run:
+The only thing selection absolutely needs to do is console.log the chosen result item. You should avoid using external libraries that attempt to solve too much of the problem — they may restrict your being able to show us where you shine.
 
-### `npm start`
+The goal of this interview is to learn what you can do in a fixed amount of time to deliver the best user experience possible (and what that means to you) - we’re hoping to see your creativity and ingenuity and debugging skills over something that merely works.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### API endpoint
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+https://autocomplete-lyart.vercel.app/api/words
 
-### `npm test`
+The GET endpoint accepts 2 query parameters:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# quick_autocomplete
+- query
+  - This is the search string to find matching words
+  - No query will return the first words in the list
+- limit
+  - The maximum number of words to return
+  - Default is 5
